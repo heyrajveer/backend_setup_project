@@ -1,3 +1,3 @@
 # My frist professional backend setup 
 
-This is a basic of on backend seetup with js
+This is the  basic setup of  backend  with js
