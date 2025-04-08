@@ -1,0 +1,23 @@
+
+// i can directly used this file in  src index but i used db->index.js
+//  becoz make code more modular and readable
+
+import mongoose from "mongoose";
+import { DB_NAME } from "../constants.js";
+
+
+
+
+const connectDB = async()=>{
+  try{
+    const connectionInstance = await mongoose.connect (`${process.env.MONGODB_URL}/${DB_NAME}`)
+    console.log(` MongoDB connected !! DB HOST:
+         ${connectionInstance.connection.host}`);
+    
+  }catch(error){
+    console.log("MOngoDB connnection error",error)
+    process.exit(1)
+  }
+}
+export default connectDB
+
