@@ -1,6 +1,7 @@
 import mongoose ,{Schema} from "mongoose";
 import mongooseAggregatePaginate  
  from "mongoose-aggregate-paginate-v2";
+ 
 const videoSchema =new Schema({
     videoFile:{
         type:String, //cloudinary url
@@ -33,4 +34,8 @@ const videoSchema =new Schema({
        },
 },{timeStamps:true})
 videoSchema.plugin(mongooseAggregatePaginate)
+// plugin to paginate aggregation results in Mongoose.
+
+// 📌 Why?
+// Because .aggregate() doesn't support .limit() and .skip() the same way .find() does with plugins like mongoose-paginate.
 export const Video =mongoose.model.Schema("Video",videoSchema)

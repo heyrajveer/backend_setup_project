@@ -1,7 +1,8 @@
 import dotenv from "dotenv"
-import express from "express"
 import connectDB from "./db/index.js"
-const app= express()
+import {app} from "./app.js"
+
+
 //  below  i apply ; for somethme people forget about ; used in above so that  in 
 //  in industy or professional apply ; for cleaning purpose
 //  ;(async () =>{
@@ -9,7 +10,7 @@ const app= express()
 //  })()
 
 dotenv.config({
-    path:'./env'
+    path:'./.env'
 })
 
 
@@ -20,8 +21,8 @@ connectDB()
         console.log(`server is running at port ${process.env.PORT}`);
     })
 })
-.catch((error)=>{
-    console.log("MOngoDB  connection failed :",error);
+.catch((err)=>{
+    console.log("MongoDB  connection failed!!! :",err);
 })
 
 
