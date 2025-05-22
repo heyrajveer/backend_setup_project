@@ -5,8 +5,7 @@
  }
  
 
-
-
+ 
 export {asynchHandler} ;
 // const asynchHandler = ()=>{}
 // const asynchHandler =(func)=>()=>{}

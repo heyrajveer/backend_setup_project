@@ -4,9 +4,11 @@
   "description": "professional backend ",
   "type": "module",
   "main": "index.js",
-  "scripts": {
+"scripts": {
+  "start": "nodemon -r dotenv/config src/index.js",
   "dev": "nodemon -r dotenv/config src/index.js"
 }
+
 ,
   "keywords": [
     "javascript",
