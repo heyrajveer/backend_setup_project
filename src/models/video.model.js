@@ -22,7 +22,7 @@ const videoSchema =new Schema({
     },
     duration:{
         type:Number, //cloudinary
-        required:true,
+        required:true, 
     },
     isPublished:{
         type:Boolean,
@@ -32,7 +32,12 @@ const videoSchema =new Schema({
         type:Schema.Types.ObjectId,
         ref:"User"
        },
-},{timeStamps:true})
+},
+{timeStamps:true}
+)
+
+
+
 videoSchema.plugin(mongooseAggregatePaginate)
 // plugin to paginate aggregation results in Mongoose.
 
